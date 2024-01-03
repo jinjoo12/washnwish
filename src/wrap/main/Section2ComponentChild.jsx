@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import './scss/section2.scss'
 import { MdAddShoppingCart } from "react-icons/md";
 
+
 export default function Section2ComponentChild({product}) {
     
     const [state, setState] = React.useState({
@@ -68,7 +69,13 @@ export default function Section2ComponentChild({product}) {
             page: page
         })
     }
-
+    const onClickPage=(e, num)=>{
+        e.preventDefault();
+        setState({
+            ...state,
+            page: num
+        })
+    }
 
     return (
         
@@ -137,16 +144,16 @@ export default function Section2ComponentChild({product}) {
                 }
                 
                 </ul>
+
                 <div className="page">
                     <a href="!#" onClick={onClickPrevPage}><i className='icon-arrow-left'></i></a>
                     {
                             state.pageNum.map((item,idx)=>{
                                 return(
-                                    <a href="!#" key={idx}><span className='on'>{item}</span></a>
+                                    <a href="!#" key={idx} onClick={(e)=>onClickPage(e,item)}><span className={`${item===state.page?'on':''}`}>{item}</span></a>
                                 )
                             })
                     }
-                    
                     <a href="!#" onClick={onClickNextPage}><i className='icon-arrow-right'></i></a>
                 </div>
             </div>

@@ -16,7 +16,7 @@ export default function Sub2Component() {
     React.useEffect(()=>{
 
         axios({
-            url:'./data/sub/sub2.json',
+            url:'./data/sub/sub2_0_all.json',
             method: 'GET'
         })
         .then((res)=>{

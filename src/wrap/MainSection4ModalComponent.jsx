@@ -22,7 +22,7 @@ export default function MainSection4ModalComponent(){
         <div id="section4Modal">            
             <div className="container">
                 <div className="content">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/tudn9SqtfaE?si=YOymhtisQJGOoXYi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tudn9SqtfaE?si=YOymhtisQJGOoXYi" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                 </div>
                 <div className="btn-box">
                     <button onClick={onClickCloseBtn}>
