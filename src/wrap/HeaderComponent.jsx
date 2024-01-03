@@ -4,13 +4,14 @@ import { useSelector, useDispatch } from "react-redux";
 import { searchModal } from '../reducer/searchModal';
 
 import { Outlet, Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function HeaderComponent(){
 
     const dispatch = useDispatch();
     const selector = useSelector((state)=>state);
     const navigate = useNavigate();
+    const location = useLocation();
 
     const [state, setState] = React.useState({
         isProductTool: false,
@@ -87,7 +88,9 @@ export default function HeaderComponent(){
                     <div className="header-inner">
                         <div className="left">
                             <div className="img-box">
-                                <img src="./images/intro/header/8c178515c91dd.png" alt="" />
+                                <Link to='/index'>
+                                    <img src="./images/intro/header/8c178515c91dd.png" alt="" />
+                                </Link>
                             </div>
                         </div>
                         <div className="mid">
@@ -100,14 +103,14 @@ export default function HeaderComponent(){
                                     state.isProductTool && (
                                         <div className="product-tooltop" onMouseLeave={onMouseLeaveProduct}>
                                             <ul>
-                                                <li><a href="!#">ALL</a></li>
-                                                <li><a href="!#">캡슐세제</a></li>
-                                                <li><a href="!#">이염방지시트</a></li>
-                                                <li><a href="!#">드라이시트</a></li>
-                                                <li><a href="!#">주방세제</a></li>
-                                                <li><a href="!#">ETC</a></li>
-                                                <li><a href="!#">파리세지엠</a></li>
-                                                <li><a href="!#">카본매트</a></li>
+                                                <li><Link to="/sub2_all" className={location.pathname==='/sub2_all'?"on":''}>ALL</Link></li>
+                                                <li><Link to="/sub2_DetergentPac" className={location.pathname==='/sub2_DetergentPac'?"on":''}>캡슐세제</Link></li>
+                                                <li><Link to="/sub2_AntiDyeSheet" className={location.pathname==='/sub2_AntiDyeSheet'?"on":''}>이염방지시트</Link></li>
+                                                <li><Link to="/sub2_DrySheet" className={location.pathname==='/sub2_DrySheet'?"on":''}>드라이시트</Link></li>
+                                                <li><Link to="/sub2_KitchenDetergent" className={location.pathname==='/sub2_KitchenDetergent'?"on":''}>주방세제</Link></li>
+                                                <li><Link to="/sub2_ETC" className={location.pathname==='/sub2_ETC'?"on":''}>ETC</Link></li>
+                                                <li><Link to="/sub2_Paris" className={location.pathname==='/sub2_Paris'?"on":''}>파리세지엠</Link></li>
+                                                <li><Link to="/sub2_CarbonMat" className={location.pathname==='/sub2_CarbonMat'?"on":''}>카본매트</Link></li>
                                             </ul>
                                         </div>
                                     )
@@ -174,14 +177,14 @@ export default function HeaderComponent(){
                                     <div className="mid-list list">
                                         <a href="!#">PRODUCT</a>
                                         <ul>
-                                            <li><a href="!#">ALL</a></li>
-                                            <li><a href="!#">캡슐세제</a></li>
-                                            <li><a href="!#">이염방지시트</a></li>
-                                            <li><a href="!#">드라이시트</a></li>
-                                            <li><a href="!#">주방세제</a></li>
-                                            <li><a href="!#">ETC</a></li>
-                                            <li><a href="!#">파리세지엠</a></li>
-                                            <li><a href="!#">카본매트</a></li>
+                                            <li><Link to="/sub2_all" className={location.pathname==='/sub2_all'?"on":''}>ALL</Link></li>
+                                            <li><Link to="/sub2_DetergentPac" className={location.pathname==='/sub2_DetergentPac'?"on":''}>캡슐세제</Link></li>
+                                            <li><Link to="/sub2_AntiDyeSheet" className={location.pathname==='/sub2_AntiDyeSheet'?"on":''}>이염방지시트</Link></li>
+                                            <li><Link to="/sub2_DrySheet" className={location.pathname==='/sub2_DrySheet'?"on":''}>드라이시트</Link></li>
+                                            <li><Link to="/sub2_KitchenDetergent" className={location.pathname==='/sub2_KitchenDetergent'?"on":''}>주방세제</Link></li>
+                                            <li><Link to="/sub2_ETC" className={location.pathname==='/sub2_ETC'?"on":''}>ETC</Link></li>
+                                            <li><Link to="/sub2_Paris" className={location.pathname==='/sub2_Paris'?"on":''}>파리세지엠</Link></li>
+                                            <li><Link to="/sub2_CarbonMat" className={location.pathname==='/sub2_CarbonMat'?"on":''}>카본매트</Link></li>
                                         </ul>
                                     </div>
                                     <div className="right-list list">

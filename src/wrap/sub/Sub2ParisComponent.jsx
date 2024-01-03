@@ -7,7 +7,7 @@ import Sub2Banner from './Sub2/Sub2Banner'
 import axios from 'axios';
 import { useSearchParams, useParams } from 'react-router-dom';
 
-export default function Sub2Component() {
+export default function Sub2ParisComponent() {
 
     const [ state, setState ] = React.useState({
         product : []
@@ -16,7 +16,7 @@ export default function Sub2Component() {
     React.useEffect(()=>{
 
         axios({
-            url:'./data/sub/sub2.json',
+            url:'./data/sub/sub2_6_Paris.json',
             method: 'GET'
         })
         .then((res)=>{
