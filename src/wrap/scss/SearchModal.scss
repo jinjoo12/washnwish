@@ -1,0 +1,61 @@
+#search-modal {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    .container {
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0, 0.9);
+        position: relative;
+        .content {
+            width: 100%;
+            height: 100%;
+            padding-bottom: 100px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .input-box {
+                position: relative;
+                input[type='text']{
+                    background: transparent;
+                    border: 0;
+                    border-bottom: 1px solid #ddd;
+                    padding: 15px 35px 15px 0;
+                    width: 700px;
+                    height: 66px;
+                    font-size: 26px;
+                    position: relative;
+                    outline: 0;
+                    color: #ddd;
+                }
+                i {
+                    position: absolute;
+                    top: 25%;
+                    right: 5px;
+                    font-size: 28px;
+                    color: #ddd;
+                }
+            }
+        }
+        .btn-box {
+            position: absolute;
+            top: 10px;
+            right: -5px;
+            width: 50px;
+            height: 50px;
+            button {
+                border: 0;
+                background: transparent;
+                cursor: pointer;
+                i {
+                    font-size: 30px;
+                    color: #bbb;
+                }
+            }
+        }
+    }
+}

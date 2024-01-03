@@ -1,0 +1,25 @@
+#quick-Menu{
+    width: 72px;
+    height: auto;
+    position: absolute;
+    top: 1050px;
+    right: 0px;
+    z-index: 7;
+    &.on{
+        position: fixed;
+        top: calc(50% - 152px);
+    }
+    .container{
+        width: 100%;
+        .col {
+            width: 72px;
+            a {
+                img {
+                    width: auto;
+                }
+            }
+            
+        }
+    }
+    
+}
