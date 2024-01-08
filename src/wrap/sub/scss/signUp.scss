@@ -1,0 +1,148 @@
+#signUp{
+    width: 100%;
+    padding: 30px 0 0 0;
+    .container{
+        width: 100%;
+        max-width: 1250px;
+        margin: 0 auto;
+        .all-chk{
+            width: 100%;
+            label{
+                position: relative;
+                width: 100%;
+                padding: 0 7px 0 0 ;
+                input{
+                    width: 14px;
+                    height: 14px;
+                    border: 1px solid rgba(38, 38, 38, 0.4);
+                    appearance: none;
+                    border-radius: 3px;
+                    &:checked{
+                        background: #9367bc;
+                        color: #fff;
+                        border-color: #9367bc;
+                    }
+                }
+                i {
+                    position: absolute;
+                    top: 5px;
+                    left: 1px;
+                    font-size: 12px;
+                    font-weight: 800;
+                    color: #fff;
+                }
+            }
+            span{
+                font-size: 12px;
+                color: #555;
+            }
+        }
+        .chk{
+            width: 100%;
+            padding: 20px 0 0 0;
+            label{
+                position: relative;
+                padding: 0 7px 0 0 ;
+                input{
+                    width: 14px;
+                    height: 14px;
+                    border: 1px solid rgba(38, 38, 38, 0.4);
+                    appearance: none;
+                    border-radius: 3px;
+                    &:checked{
+                        background: #9367bc;
+                        color: #fff;
+                        border-color: #9367bc;
+                    }
+                }
+                i {
+                    position: absolute;
+                    top: 5px;
+                    left: 1px;
+                    font-size: 12px;
+                    font-weight: 800;
+                    color: #fff;
+                }
+            }
+            span{
+                font-size: 12px;
+                color: #555;
+                em{
+                    margin: 0 0 0 6px;
+                    font-size: 16px;
+                    color: #F84A71;
+                    font-weight: 300;
+                    vertical-align: baseline;
+                }
+            }
+            .content{
+                margin: 20px 0 0 0;
+                width: 100%;
+                height: 200px;
+                border: 1px solid #dfe0df;
+                border-radius: 4px;
+                overflow: hidden;
+                padding: 12px 14px;
+                position: sticky;
+                overflow-y: auto;
+                p {
+                    font-size: 12px;
+                    font-weight: 300;
+                    color: #000;
+                    line-height: 140%;
+                }
+            }
+            &.chk3{
+                width: 100%;
+                .content{
+                    margin: 20px 0 15px 0;
+                }
+                label{
+                    width: 100%;
+                    display: block;
+                    margin: 0 0 10px 0;
+                    i{
+                        transform: translateY(-3px);
+                    }
+                    span{
+                        margin: 0 0 0 6px;
+                    }
+                    &:last-child{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        .button-box{
+            padding: 10px 0 0 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .cancel{
+                width: 68px;
+                height: 40px;
+                border: 1px solid #ddd;
+                padding: 10px 20px;
+                font-size: 12px;
+                line-height: 17px;
+                text-align: center;
+                cursor: pointer;
+            }
+            .join{
+                width: 104px;
+                height: 40px;
+                border: 1px solid #9367bc;
+                padding: 10px 25px;
+                text-align: center;
+                background: #9367bc;
+                color: #fff;
+                font-weight: 300;
+                margin: 0 0 0 10px;
+                cursor: pointer;
+            }
+            
+            
+        }
+    }
+}

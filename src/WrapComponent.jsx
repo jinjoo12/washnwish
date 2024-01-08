@@ -8,6 +8,10 @@ import SearchModalComponent from './wrap/SearchModalComponent';
 import MainSection4ModalComponent from './wrap/MainSection4ModalComponent'
 import FooterTermsModalComponent from './wrap/FooterTermsModalComponent'
 import FooterPersonalInfoModalComponent from './wrap/FooterPersonalInfoModalComponent'
+import CartComponent from './wrap/CartComponent';
+import ProDuctComponent from './wrap/ProDuctComponent';
+
+import Sub1Component from './wrap/sub/Sub1Component';
 
 import Sub2Component from './wrap/sub/Sub2Component';
 import Sub2AllComponent from './wrap/sub/Sub2AllComponent';
@@ -18,8 +22,12 @@ import Sub2ETCComponent from './wrap/sub/Sub2ETCComponent';
 import Sub2KitchenDetergentComponent from './wrap/sub/Sub2KitchenDetergentComponent';
 import Sub2ParisComponent from './wrap/sub/Sub2ParisComponent';
 import Sub2CarbonMatComponent from './wrap/sub/Sub2CarbonMatComponent';
+import SubSignInComponent from './wrap/sub/SubSignInComponent';
+import SubSignUpComponent from './wrap/sub/SubSignUpComponent';
+import SubSignUpComponentChild from './wrap/sub/SubSignUpComponentChild';
 
-
+import SubNoticeComponent from './wrap/sub/SubNoticeComponent';
+import SubCSCenterComponent from './wrap/sub/SubCSCenterComponent';
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -44,6 +52,7 @@ export default function WrapComponent() {
                     <Route path='/' element={<HeaderComponent />}>
                         <Route index element={<MainComponent />}/>
                         <Route path='/index' element={<MainComponent />}/>
+                        <Route path='/sub1' element={<Sub1Component />}/>
                         <Route path='/sub2' element={<Sub2Component />}/>
                         <Route path='/sub2_all' element={<Sub2AllComponent />}/>
                         <Route path='/sub2_DetergentPac' element={<Sub2DetergentPacComponent />}/>
@@ -53,6 +62,13 @@ export default function WrapComponent() {
                         <Route path='/sub2_ETC' element={<Sub2ETCComponent />}/>
                         <Route path='/sub2_Paris' element={<Sub2ParisComponent />}/>
                         <Route path='/sub2_CarbonMat' element={<Sub2CarbonMatComponent />}/>
+                        <Route path='/notice' element={<SubNoticeComponent />}/>
+                        <Route path='/center' element={<SubCSCenterComponent />}/>
+                        <Route path='/cart' element={<CartComponent />}/>
+                        <Route path='/product' element={<ProDuctComponent />}/>
+                        <Route path='/signIn' element={<SubSignInComponent />}/>
+                        <Route path='/signUp' element={<SubSignUpComponent />}/>
+                        <Route path='/signUp2' element={<SubSignUpComponentChild />}/>
                     </Route>
 
                 </Routes>

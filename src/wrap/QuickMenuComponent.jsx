@@ -1,5 +1,6 @@
 import React from "react";
 import './scss/QuickMenu.scss'
+import { Link } from "react-router-dom";
 
 export default function QuickMenuComponent(){
 
@@ -34,7 +35,7 @@ export default function QuickMenuComponent(){
                     <a href="!#"><img src="./images/quickMenu/bafa2a2e0d1dd.png" alt="" /></a>
                 </div>
                 <div className="col col2">
-                    <a href="!#"><img src="./images/quickMenu/7f8b3f9a85040.png" alt="" /></a>
+                    <Link to="/signUp"><img src="./images/quickMenu/7f8b3f9a85040.png" alt="" /></Link>
                 </div>
                 <div className="col col3">
                     <a href="!#"><img src="./images/quickMenu/13c90576f3121.png" alt="" /></a>

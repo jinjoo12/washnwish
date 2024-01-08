@@ -95,9 +95,9 @@ export default function HeaderComponent(){
                         </div>
                         <div className="mid">
                             <nav className='nav-box' >
-                                <a href='!#' >OUR STORY</a>
+                                <Link to='/sub1'>OUR STORY</Link>
                                 <Link to='/sub2' onMouseEnter={onMouseEnterProduct} >PRODUCT</Link>
-                                <a href='!#' onMouseEnter={onMouseEnterCommunity} >COMMUNITY</a>
+                                <Link to="/notice" onMouseEnter={onMouseEnterCommunity} >COMMUNITY</Link>
                             </nav>
                                 {
                                     state.isProductTool && (
@@ -119,8 +119,8 @@ export default function HeaderComponent(){
                                     state.isCommunityTool && (
                                         <div className="community-tooltop" onMouseLeave={onMouseLeaveCommunity}>
                                             <ul>
-                                                <li><a href="!#">NOTICE</a></li>
-                                                <li><a href="!#">CS CENTER</a></li>
+                                                <li><Link to="/notice">NOTICE</Link></li>
+                                                <li><Link to="/center">CS CENTER</Link></li>
                                             </ul>
                                         </div>
                                     )
@@ -129,10 +129,24 @@ export default function HeaderComponent(){
                         <div className="right">
                             <ul className='nav-sub-box'>
                                 <li>
-                                    <a href="!#">
-                                        <i className='icon-login'></i>
-                                        <span>로그인</span>
-                                    </a>
+                                {
+                                        selector.signIn.로그인정보===null && (
+                                            <Link to="/signIn">
+                                                <i className='icon-login'></i>
+                                                <span>로그인</span>
+                                            </Link>
+                                        )
+                                    }
+
+                                    {
+                                        selector.signIn.로그인정보!==null && (
+                                            <>
+                                                <span>{selector.signIn.로그인정보.구분}</span>
+                                                <span>{selector.signIn.로그인정보.이름}님</span>
+                                            </>
+                                        )
+
+                                    }
                                 </li>
                                 <li>
                                     <a href="!#">
@@ -147,10 +161,10 @@ export default function HeaderComponent(){
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="!#">
+                                    <Link to="/cart">
                                         <i className='icon-basket-loaded'></i>
                                         <span>장바구니</span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
                                     <a href="!#">

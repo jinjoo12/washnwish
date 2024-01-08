@@ -8,6 +8,10 @@ import searchModal from './reducer/searchModal.js'
 import footerTermsModal from './reducer/footerTermsModal.js'
 import footerPersonalInfoModal from './reducer/footerPersonalInfoModal.js'
 import mainModal from './reducer/mainModal.js'
+import cartReducer from './reducer/cartReducer';
+import viewProduct from './reducer/viewProduct';
+import viewProductIsFlag from './reducer/viewProductIsFlag';
+import signIn from './reducer/signIn.js';
 
 let store = configureStore ({
   reducer : {
@@ -16,6 +20,10 @@ let store = configureStore ({
     footerTermsModal,
     footerPersonalInfoModal,
     mainModal,
+    cartReducer,
+    viewProduct,
+    viewProductIsFlag,
+    signIn
   }
 })
 
